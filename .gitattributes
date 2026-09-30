@@ -1,5 +1,9 @@
-*       text    eol=lf
+﻿*       text    eol=lf
 *.exe   binary
+*.apk   binary
+*.aab   binary
+*.jar   binary
+*.so    binary
 *.png   binary
 *.jpg   binary
 *.jpeg  binary

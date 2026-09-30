@@ -1,341 +1,79 @@
-<p align="right">
-  <a href="README.md">English</a> |
-  <a href="./doc/README-CN.md">简体中文</a>
-</p>
+﻿# 📱 Chatty - Android AI Copilot
 
-<h1 align="center">
-<img src='./doc/statics/icon.png' width='30'>
-<span>
-    Chatbox
-    <span style="font-size:8px; font-weight: normal;">(Community Edition)</span>
-</span>
-</h1>
-<p align="center">
-    <em>Your Ultimate AI Copilot on the Desktop. <br />Chatbox is a desktop client for ChatGPT, Claude and other LLMs, available on Windows, Mac, Linux</em>
-</p>
-
-<p align="center">
-<a href="https://github.com/chatboxai/chatbox/releases" target="_blank">
-<img alt="macOS" src="https://img.shields.io/badge/-macOS-black?style=flat-square&logo=apple&logoColor=white" />
-</a>
-<a href="https://github.com/chatboxai/chatbox/releases" target="_blank">
-<img alt="Windows" src="https://img.shields.io/badge/-Windows-blue?style=flat-square&logo=windows&logoColor=white" />
-</a>
-<a href="https://github.com/chatboxai/chatbox/releases" target="_blank">
-<img alt="Linux" src="https://img.shields.io/badge/-Linux-yellow?style=flat-square&logo=linux&logoColor=white" />
-</a>
-<a href="https://github.com/chatboxai/chatbox/releases" target="_blank">
-<img alt="Downloads" src="https://img.shields.io/github/downloads/chatboxai/chatbox/total.svg?style=flat" />
-</a>
-<a href="#features">
-<img alt="Privacy" src="https://img.shields.io/badge/-Local%20First-green?style=flat-square&logo=shield&logoColor=white" />
-</a>
-</p>
-
-<p align="center">
-<a href="https://www.producthunt.com/posts/chatbox?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-chatbox" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=429547&theme=light" alt="Chatbox - Better&#0032;UI&#0032;&#0038;&#0032;Desktop&#0032;App&#0032;for&#0032;ChatGPT&#0044;&#0032;Claude&#0032;and&#0032;other&#0032;LLMs&#0046; | Product Hunt" style="width: 150px; height: 30px;" width="100" height="40" /></a>
-<a href="https://trendshift.io/repositories/14871" target="_blank"><img src="https://trendshift.io/api/badge/repositories/14871" alt="chatboxai%2Fchatbox | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
-</p>
-
-<p align="center">
-  <a href="./doc/statics/snapshot_light.png">
-    <img src="./doc/statics/snapshot_light.png" width="400"/>
-  </a>
-  <a href="./doc/statics/snapshot_dark.png">
-    <img src="./doc/statics/snapshot_dark.png" width="400"/>
-  </a>
-</p>
+**Chatty** is a privacy-focused Android client for ChatGPT, Claude, Gemini, DeepSeek, and local LLMs (Ollama), built on top of [Chatbox](https://github.com/chatboxai/chatbox).
 
 ---
 
-This is the repository for the Chatbox Community Edition, open-sourced under the GPLv3 license.
+### 📥 Download Pre-built Android APK
+You can download and install the ready-to-run APK directly:
+* **[Download Chatty-Android-debug.apk (v1.0.0)](./Chatty-Android-debug.apk)** (~50.8 MB)
 
-[Chatbox is going open-source Again!](https://github.com/chatboxai/chatbox/issues/2266)
+Or find it locally on your computer at:
+```
+D:\A.I\Google\Antigravity\Chatty\Chatty-Android-debug.apk
+```
 
-We regularly sync code from the pro repo to this repo, and vice versa.
+---
 
-## Download
+## 🌟 Key Modifications from Upstream Chatbox
 
-### Desktop
+### 1. 🚫 Removed Chatbox AI Cloud Account Gates
+* **No Account Required**: The proprietary Chatbox AI account registration/login flow and paywalls have been completely removed.
+* **Direct BYOK (Bring Your Own Key)**: Settings defaults directly to Model Providers. Connect directly to your own API keys:
+  * OpenAI (`gpt-4o`, `o1`, `o3-mini`, etc.)
+  * Anthropic Claude (`claude-3-5-sonnet`, `claude-3-7-sonnet`, etc.)
+  * Google Gemini (`gemini-2.5-pro`, `gemini-2.0-flash`, etc.)
+  * DeepSeek (`deepseek-chat`, `deepseek-reasoner`)
+  * Ollama / Local LLMs (over LAN or local Wi-Fi)
+  * Groq, Moonshot, SiliconFlow, Zhipu, and custom OpenAI-compatible endpoints.
+* **Offline Document Parsing**: Document and file parsing defaults to local offline parsers, keeping your data private on device.
 
-<table style="width: 100%">
-  <tr>
-    <td width="25%" align="center">
-      <b>Windows</b>
-    </td>
-    <td width="25%" align="center" colspan="2">
-      <b>MacOS</b>
-    </td>
-    <td width="25%" align="center">
-      <b>Linux</b>
-    </td>
-  </tr>
-  <tr style="text-align: center">
-    <td align="center" valign="middle">
-      <a href='https://chatboxai.app/?c=download-windows'>
-        <img src='./doc/statics/windows.png' style="height:24px; width: 24px" />
-        <br />
-        <b>Setup.exe</b>
-      </a>
-    </td>
-    <td align="center" valign="middle">
-      <a href='https://chatboxai.app/?c=download-mac-intel'>
-        <img src='./doc/statics/mac.png' style="height:24px; width: 24px" />
-        <br />
-        <b>Intel</b>
-      </a>
-    </td>
-    <td align="center" valign="middle">
-      <a href='https://chatboxai.app/?c=download-mac-aarch'>
-        <img src='./doc/statics/mac.png' style="height:24px; width: 24px" />
-        <br />
-        <b style="white-space: nowrap;">Apple Silicon</b>
-      </a>
-    </td>
-    <td align="center" valign="middle">
-      <a href='https://chatboxai.app/?c=download-linux'>
-        <img src='./doc/statics/linux.png' style="height:24px; width: 24px" />
-        <br />
-        <b>AppImage</b>
-      </a>
-    </td>
-  </tr>
-</table>
+### 2. 🛠️ Work Mode (Agent Execution & Artifacts) on Android
+* **Enabled for Mobile**: Work Mode (previously restricted to desktop Electron builds) is now fully enabled on Android.
+* **Interactive Artifact Previews**: HTML, SVG, Markdown, and code artifacts generated by AI can be viewed and run directly inside a sandboxed mobile iframe view.
+* **Reasoning Control**: Dedicated reasoning effort controls (Low, Medium, High) for thinking models (`o1`, `o3-mini`, `deepseek-r1`).
 
-### iOS/Android
+### 3. 🔌 Model Context Protocol (MCP) Support on Mobile
+* **Mobile MCP Transports**: Fully enabled MCP client support for Android using Streamable HTTP and Server-Sent Events (SSE) transports.
+* **Local Network (LAN) Support**: Configured `usesCleartextTraffic="true"` in AndroidManifest to enable seamless connections to MCP tool servers running on your local home/office Wi-Fi (e.g. `http://192.168.x.x:port`).
 
-<a href='https://apps.apple.com/app/chatbox-ai/id6471368056' style='margin-right: 4px'>
-<img src='./doc/statics/app_store.webp' style="height:38px;" />
-</a>
-<a href='https://play.google.com/store/apps/details?id=xyz.chatboxapp.chatbox' style='margin-right: 4px'>
-<img src='./doc/statics/google_play.png' style="height:38px;" />
-</a>
-<a href='https://chatboxai.app/install?download=android_apk' style='margin-right: 4px; display: inline-flex; justify-content: center'>
-<img src='./doc/statics/android.png' style="height:28px; display: inline-block" />
-.APK
-</a>
+---
 
-For more information: [chatboxai.app](https://chatboxai.app/)
+## 🚀 How to Install on Android
 
-## Quick Start
+1. Download **[`Chatty-Android-debug.apk`](./Chatty-Android-debug.apk)** to your Android device (or transfer it from your PC via USB / file transfer).
+2. Tap the APK file to install.
+3. If prompted, allow **"Install unknown apps"** in Android Settings.
+4. Launch **Chatty**, go to **Settings -> Model Provider**, enter your API key or Ollama host, and start chatting!
 
-### For End Users
-1. Download the appropriate installer for your platform from the [releases page](https://github.com/chatboxai/chatbox/releases)
-2. Install and launch Chatbox
-3. Configure your AI provider (OpenAI, Claude, etc.) in settings
-4. Start chatting!
+---
 
-### System Requirements
-
-| Platform | Minimum Version | Architecture |
-|----------|----------------|--------------|
-| Windows | Windows 10 | x64 |
-| macOS | macOS 11 (Big Sur) | Intel/Apple Silicon |
-| Linux | Ubuntu 20.04+ / AppImage supported distros | x64 |
-
-<!-- <table>
-<tr>
-<td>
-<img src="./dec/../doc/demo_mobile_1.png" alt="App Screenshot" style="box-shadow: 2px 2px 10px rgba(0,0,0,0.1); border: 1px solid #ddd; border-radius: 8px; height: 300px" />
-</td>
-<td>
-<img src="./dec/../doc/demo_mobile_2.png" alt="App Screenshot" style="box-shadow: 2px 2px 10px rgba(0,0,0,0.1); border: 1px solid #ddd; border-radius: 8px; height: 300px" />
-</td>
-</tr>
-</table> -->
-
-## Features
-
-### 🤖 AI Model Support
--   **Support for Multiple LLM Providers**  
-    :gear: Seamlessly integrate with a variety of cutting-edge language models:
-    -   OpenAI (ChatGPT)
-    -   Azure OpenAI
-    -   Claude
-    -   Google Gemini Pro
-    -   Ollama (enable access to local models like llama2, Mistral, Mixtral, codellama, vicuna, yi, and solar)
-    -   ChatGLM-6B
-
--   **Image Generation with Dall-E-3**  
-    :art: Create the images of your imagination with Dall-E-3.
-
--   **Enhanced Prompting**  
-    :speech_balloon: Advanced prompting features to refine and focus your queries for better responses.
-
-### 🖥️ User Experience
--   **Local Data Storage**  
-    :floppy_disk: Your data remains on your device, ensuring it never gets lost and maintains your privacy.
-
--   **No-Deployment Installation Packages**  
-    :package: Get started quickly with downloadable installation packages. No complex setup necessary!
-
--   **Ergonomic UI & Dark Theme**  
-    :new_moon: A user-friendly interface with a night mode option for reduced eye strain during extended use.
-
--   **Keyboard Shortcuts**  
-    :keyboard: Stay productive with shortcuts that speed up your workflow.
-
--   **Streaming Reply**  
-    :arrow_forward: Provide rapid responses to your interactions with immediate, progressive replies.
-
-### 📄 Content & Formatting
--   **Markdown, Latex & Code Highlighting**  
-    :scroll: Generate messages with the full power of Markdown and Latex formatting, coupled with syntax highlighting for various programming languages, enhancing readability and presentation.
-
--   **Prompt Library & Message Quoting**  
-    :books: Save and organize prompts for reuse, and quote messages for context in discussions.
-
-### 👥 Collaboration & Sharing
--   **Team Collaboration**  
-    :busts_in_silhouette: Collaborate with ease and share OpenAI API resources among your team. [Learn More](./team-sharing/README.md)
-
-### 🌐 Platform Availability
--   **Cross-Platform Desktop**  
-    :computer: Chatbox is ready for Windows, Mac, and Linux users.
-
--   **Web Version**  
-    :globe_with_meridians: Use the web application on any device with a browser, anywhere.
-
--   **Mobile Apps**  
-    :phone: Native iOS and Android applications for on-the-go access.
-
-### 🌍 Localization
--   **Multilingual Support**  
-    :earth_americas: Catering to a global audience by offering support in multiple languages:
-    -   English
-    -   简体中文 (Simplified Chinese)
-    -   繁體中文 (Traditional Chinese)
-    -   日本語 (Japanese)
-    -   한국어 (Korean)
-    -   Français (French)
-    -   Deutsch (German)
-    -   Русский (Russian)
-    -   Español (Spanish)
-
-### ✨ More Features
--   **And More...**  
-    :sparkles: Constantly enhancing the experience with new features!
-
-## FAQ
-
--   [Frequently Asked Questions](./doc/FAQ.md)
-
-## How to Contribute
-
-We welcome contributions from the community! Here's how you can help make Chatbox better:
-
-### 🐛 Reporting Issues
-- Use [GitHub Issues](https://github.com/chatboxai/chatbox/issues) to report bugs or request features
-- Before creating a new issue, please search existing issues to avoid duplicates
-- Provide detailed information including steps to reproduce, expected behavior, and screenshots if applicable
-
-### 🔧 Pull Requests
-1. Fork the repository and create your branch from `main`
-2. Make your changes and ensure the code follows our coding standards
-3. Test your changes thoroughly
-4. Update documentation if needed
-5. Submit a pull request with a clear description of the changes
-
-### 🌍 Translations
-Help make Chatbox accessible to more people by contributing translations:
-- Translation files are located in the `src/locales` directory
-- Follow the existing translation format
-- Submit a PR with your translation improvements
-
-### 📖 Documentation
-- Improve README, API documentation, or user guides
-- Fix typos or clarify unclear instructions
-- Add examples and tutorials
-
-### 🌟 Other Ways to Contribute
-- Star the repository to show your support
-- Share Chatbox with others
-- Answer questions in [GitHub Discussions](https://github.com/chatboxai/chatbox/discussions)
-- Provide feedback and suggestions
-
-**Thank you for contributing! 🙏**
-
-## Development
+## 🛠️ Building from Source
 
 ### Prerequisites
+* **Node.js**: v20 or higher
+* **Java**: OpenJDK 21 LTS (`JAVA_HOME` configured)
+* **Android SDK**: Build Tools 34.0.0+, Android SDK Platform 34
 
-Before you begin, ensure you have the following installed:
+### Build Steps
+```bash
+# 1. Install dependencies
+npm install
 
-- **Node.js** (v20.x – v22.x) - [Download here](https://nodejs.org/)
-- **pnpm** (v10.x or later) - Install via `corepack enable && corepack prepare pnpm@latest --activate`
-- **Git** - [Download here](https://git-scm.com/)
+# 2. Build the Android web assets
+npm run build:android
 
-### Quick Setup
+# 3. Synchronize Capacitor Android project
+npx cap sync android
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/chatboxai/chatbox.git
-   cd chatbox
-   ```
-
-2. **Install dependencies**
-   ```bash
-   pnpm install
-   ```
-
-3. **Start development server**
-   ```bash
-   pnpm run dev
-   ```
-   The application will start in development mode with hot-reload enabled.
-
-### Build Commands
-
-| Command | Description |
-|---------|-------------|
-| `pnpm run dev` | Start development server with hot-reload |
-| `pnpm run package` | Build and package for current platform |
-| `pnpm run package:all` | Build and package for all platforms |
-| `pnpm run build` | Build for production without packaging |
-| `pnpm run lint` | Run Biome to check code quality |
-| `pnpm run test` | Run Vitest test suite |
-
-### Project Structure
-
+# 4. Compile the Debug APK
+cd android
+./gradlew assembleDebug
 ```
-chatbox/
-├── src/
-│   ├── main/               # Electron main process
-│   ├── renderer/           # React renderer (UI)
-│   ├── preload/            # Electron preload scripts
-│   └── shared/             # Shared utilities
-├── doc/                    # Documentation and assets
-├── resources/              # App resources and icons
-├── team-sharing/           # Team collaboration features
-└── package.json            # Project configuration
-```
+The compiled APK will be output to:
+`android/app/build/outputs/apk/debug/app-debug.apk`
 
-### Development Tips
+---
 
-- Use `pnpm run lint` before committing to ensure code quality
-- Follow the existing code style and patterns
-- Test your changes on both light and dark themes
-- Ensure cross-platform compatibility when making UI changes
-
-### Troubleshooting
-
-**Issue**: `pnpm install` fails
-- **Solution**: Ensure you're using pnpm (not npm or yarn) and Node.js version is within the required range. Run `corepack enable` if pnpm is not found.
-
-**Issue**: Build fails on Windows
-- **Solution**: Run `pnpm config set script-shell "C:\\Program Files\\git\\bin\\bash.exe"` if using Git Bash
-
-**Issue**: Changes not reflecting in development
-- **Solution**: Stop the dev server, delete `node_modules/.vite`, and restart
-
-## Star History
-
-[![Star History Chart](https://star-history.dera.page/svg?repos=chatboxai/chatbox&type=Date)](https://star-history.dera.page/#chatboxai/chatbox&Date)
-
-## Contact
-
-[Email](mailto:hi@chatboxai.com)
-
-## License
-
-[LICENSE](./LICENSE)
+## 📄 License
+This project is open-source under the GPLv3 license, following the upstream Chatbox Community Edition.
