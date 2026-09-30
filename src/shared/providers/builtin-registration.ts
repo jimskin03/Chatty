@@ -5,7 +5,8 @@
  * is also the default provider display order. Hosts that need model creation
  * import this module explicitly through their model-runtime entrypoint.
  */
-import './definitions/chatboxai'
+// ChatboxAI registration removed in Chatty
+// import './definitions/chatboxai'
 import './definitions/openai'
 import './definitions/openai-responses'
 import './definitions/gemini'

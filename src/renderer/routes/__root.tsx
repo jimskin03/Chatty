@@ -232,14 +232,12 @@ function Root() {
 
       initialized.current = true
 
-      // Check if user needs onboarding guide
-      // Conditions: not completed onboarding AND no valid config
-      const onboardingCompleted = onboardingStore.getState().completed
+      // Check if user needs setup
       const needsSetup = settingActions.needEditSetting()
 
-      // Auto-navigate to guide for new users who need setup
-      if (!isExceeded && !onboardingCompleted && needsSetup) {
-        router.navigate({ to: '/guide', replace: true })
+      // Auto-navigate to settings provider configuration for new users
+      if (needsSetup && location.pathname === '/') {
+        router.navigate({ to: '/settings/provider', replace: true })
         return
       }
 

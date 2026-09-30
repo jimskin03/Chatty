@@ -18,7 +18,10 @@ import type { ViewMode } from './-components/types'
 import { useAuthTokens } from './-components/useAuthTokens'
 
 export const Route = createFileRoute('/settings/provider/chatbox-ai/')({
-  component: RouteComponent,
+  beforeLoad: ({ navigate }) => {
+    navigate({ to: '/settings/provider', replace: true })
+  },
+  component: () => null,
 })
 
 export function RouteComponent() {

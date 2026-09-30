@@ -54,8 +54,8 @@ const scenarioAgentModeOff = {
 } satisfies AgentModeEntry
 
 const firstChatScenarioDefaultModel = {
-  provider: ModelProviderEnum.ChatboxAI,
-  modelId: 'chatboxai-3.5',
+  provider: ModelProviderEnum.OpenAI,
+  modelId: 'gpt-4o',
 } satisfies Pick<SessionSettings, 'provider' | 'modelId'>
 
 export const Route = createFileRoute('/')({

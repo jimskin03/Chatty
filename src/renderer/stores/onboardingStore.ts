@@ -17,7 +17,7 @@ interface OnboardingActions {
 export const onboardingStore = createStore<OnboardingState & OnboardingActions>()(
   persist(
     (set) => ({
-      completed: false,
+      completed: true,
 
       markCompleted: () => set({ completed: true }),
 

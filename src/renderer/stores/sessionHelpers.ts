@@ -965,7 +965,7 @@ export function initEmptyChatSession(): Omit<Session, 'id'> {
         provider: settings.defaultChatModel.provider,
         modelId: settings.defaultChatModel.model,
       }
-    : lastUsedChatModel || resolveChatboxLicenseDefaultModel(settings)
+    : lastUsedChatModel || { provider: ModelProviderEnum.OpenAI, modelId: 'gpt-4o' }
   const newSession: Omit<Session, 'id'> = {
     name: 'Untitled',
     type: 'chat',
