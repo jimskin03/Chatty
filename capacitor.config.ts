@@ -1,10 +1,10 @@
 import type { CapacitorConfig } from '@capacitor/cli'
+import { KeyboardResize } from '@capacitor/keyboard'
 
 const config: CapacitorConfig = {
   appId: 'xyz.chatboxapp.ce',
   appName: 'Chatty',
   webDir: 'release/app/dist/renderer',
-  bundledWebRuntime: false,
   server: {
     androidScheme: 'https',
     cleartext: true,
@@ -18,7 +18,7 @@ const config: CapacitorConfig = {
       androidSplashResourceName: 'splash',
     },
     Keyboard: {
-      resize: 'body',
+      resize: KeyboardResize.Body,
     },
     CapacitorHttp: {
       enabled: true,

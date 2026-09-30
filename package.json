@@ -3,7 +3,7 @@
   "productName": "xyz.chatboxapp.ce",
   "version": "0.0.1",
   "engines": {
-    "node": ">=22.13.0 <23.0.0",
+    "node": ">=22.13.0",
     "pnpm": ">=10.17.0"
   },
   "private": true,
@@ -16,7 +16,7 @@
     "build:preload": "cross-env CHATBOX_ELECTRON_VITE_TARGET=preload electron-vite build",
     "build:renderer": "cross-env CHATBOX_ELECTRON_VITE_TARGET=renderer electron-vite build",
     "build:web": "cross-env CHATBOX_BUILD_PLATFORM=web electron-vite build && pnpm run delete-sourcemaps",
-    "delete-sourcemaps": "ts-node ./.erb/scripts/delete-source-maps-runner.js",
+    "delete-sourcemaps": "tsx ./.erb/scripts/delete-source-maps-runner.js",
     "postinstall": "node .erb/scripts/postinstall.cjs",
     "package": "tsx ./.erb/scripts/clean.js && pnpm run build && cross-env UPDATE_CHANNEL=alpha electron-builder build --publish never",
     "package:all": "tsx ./.erb/scripts/clean.js && pnpm run build && cross-env UPDATE_CHANNEL=alpha electron-builder build --publish never --win --mac --linux",

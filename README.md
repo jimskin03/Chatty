@@ -51,24 +51,22 @@ D:\A.I\Google\Antigravity\Chatty\Chatty-Android-debug.apk
 ## 🛠️ Building from Source
 
 ### Prerequisites
-* **Node.js**: v20 or higher
+* **Node.js**: v22.13.0 or higher
+* **pnpm**: v10.17.0 or higher
 * **Java**: OpenJDK 21 LTS (`JAVA_HOME` configured)
 * **Android SDK**: Build Tools 34.0.0+, Android SDK Platform 34
 
 ### Build Steps
 ```bash
 # 1. Install dependencies
-npm install
+pnpm install
 
-# 2. Build the Android web assets
-npm run build:android
+# 2. Build the Android web assets and sync Capacitor
+pnpm run mobile:sync:android
 
-# 3. Synchronize Capacitor Android project
-npx cap sync android
-
-# 4. Compile the Debug APK
+# 3. Compile the Debug APK
 cd android
-./gradlew assembleDebug
+./gradlew assembleDebug   # On Windows: .\gradlew assembleDebug
 ```
 The compiled APK will be output to:
 `android/app/build/outputs/apk/debug/app-debug.apk`
